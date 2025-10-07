@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/yeojunjeon42/online_namecard/issues"
   },
-  "homepage": "https://github.com/yeojunjeon42/online_namecard#readme",
+  "homepage": "https://yourusername.github.io/ensoltech-website",
   "description": "",
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
