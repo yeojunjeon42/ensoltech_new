@@ -11,10 +11,9 @@ function App() {
 
     return (
 
-        <div className="min-h-screen bg-gradient-to-br from-sky-200 to-sky-700">
+        <div className="min-h-screen bg-white">
             <Navbar />
             <Hero />
-            
             <About />
             <Product />
             <Contact />
