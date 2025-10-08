@@ -26,7 +26,7 @@ function Navbar() {
             {/* Logo and Brand Name */}
             <div className="flex items-center gap-1">
                 <a href="/">
-                    <img src="/public/img/ensoltech_logo.png" alt="Ensoltech logo" className="h-12" />
+                    <img src="/ensoltechv2/img/Ensoltech_logo.png" alt="Ensoltech logo" className="h-12" />
                 </a>
                 
             </div>

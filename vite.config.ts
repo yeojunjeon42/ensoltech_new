@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/ensoltech_new/',
+  base: '/ensoltechv2/',
   server: {
     port: 3000,
     watch: {

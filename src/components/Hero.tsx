@@ -4,27 +4,27 @@ function Hero() {
     // Array of equipment images from both folders
     const equipmentImages = [
         {
-            src: '/img/enproductive/Smart-filter system Particle Cut.png',
+            src: '/ensoltechv2/img/enproductive/Smart-filter system Particle Cut.png',
             alt: 'Smart-filter system Particle Cut'
         },
         {
-            src: '/img/enproductive/TOPWAY On-line Chemical controller & dosing system  .png',
+            src: '/ensoltechv2/img/enproductive/TOPWAY On-line Chemical controller & dosing system  .png',
             alt: 'TOPWAY On-line Chemical controller & dosing system'
         },
         {
-            src: '/img/equipment/OEM Equipment., Ltd. Horizontal Wet process.png',
+            src: '/ensoltechv2/img/equipment/OEM Equipment., Ltd. Horizontal Wet process.png',
             alt: 'OEM Equipment Horizontal Wet process'
         },
         {
-            src: '/img/equipment/PCB equipment solution  KSDW VCP - Steel Belt VCP.png',
+            src: '/ensoltechv2/img/equipment/PCB equipment solution  KSDW VCP - Steel Belt VCP.png',
             alt: 'PCB equipment solution KSDW VCP Steel Belt VCP'
         },
         {
-            src: '/img/equipment/SUNUS 수평 진공 홀플러깅 설비.png',
+            src: '/ensoltechv2/img/equipment/SUNUS 수평 진공 홀플러깅 설비.png',
             alt: 'SUNUS 수평 진공 홀플러깅 설비'
         },
         {
-            src: '/img/equipment/수평인라인 Desmear+PTH(DM)+Flash Cu line.png',
+            src: '/ensoltechv2/img/equipment/수평인라인 Desmear+PTH(DM)+Flash Cu line.png',
             alt: '수평인라인 Desmear+PTH(DM)+Flash Cu line'
         }
     ];
@@ -49,6 +49,14 @@ function Hero() {
             <h1 className="text-black text-6xl font-bold leading-tight" style={{ fontFamily: 'Inter, Arial, Helvetica, sans-serif' }}>
                 ENSOLTECH
             </h1>
+            <p className="text-gray-700 text-lg mt-6 max-w-4xl leading-relaxed">
+                엔솔테크는 PCB, IC Package, GMF, PV, 베터리 등의
+                산업분야에 필요한 최적의 설비와 부품, 원자재
+                등을 공급하고, 약품절감 및 물 사용 최적화, 폐수
+                리사이클 솔루션을 통해 생산성향상 및 원가절감
+                솔루션을 제공하고 환경을 보호함으로써 고객의
+                수익과 사회적 가치를 높이는데 기여하겠습니다.
+            </p>
             <div className="w-full flex flex-col justify-center items-center mt-8 p-[10pt] relative">
                 {/* Image Container with Sliding Animation */}
                 <div className="w-full overflow-hidden rounded-lg shadow-lg">
