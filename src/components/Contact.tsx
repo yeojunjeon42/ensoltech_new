@@ -1,6 +1,77 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    organization: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'fb8cd7dd-6687-402d-bb3d-da6257e95b36',
+          name: formData.name,
+          organization: formData.organization,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Contact Form Submission from ${formData.name}`
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: '메세지가 성공적으로 전송되었습니다!'
+        });
+        // Reset form
+        setFormData({
+          name: '',
+          organization: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: '전송에 실패했습니다. 다시 시도해주세요.'
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: '전송 중 오류가 발생했습니다. 다시 시도해주세요.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div id="contact" className="pt-24 p-10">
       <hr className="border-t border-gray-300 mb-8" />
@@ -9,7 +80,20 @@ const Contact: React.FC = () => {
       
       {/* Contact Form */}
       <div className="max-w-2xl mx-auto px-5">
-        <form className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            {/* Success/Error Messages */}
+            {submitStatus.type && (
+              <div
+                className={`p-4 rounded-md ${
+                  submitStatus.type === 'success'
+                    ? 'bg-green-100 text-green-800 border border-green-300'
+                    : 'bg-red-100 text-red-800 border border-red-300'
+                }`}
+              >
+                {submitStatus.message}
+              </div>
+            )}
+
             {/* 성함 (Name) */}
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -19,6 +103,9 @@ const Contact: React.FC = () => {
                 type="text"
                 id="name"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="이름을 입력해주세요"
               />
@@ -33,6 +120,8 @@ const Contact: React.FC = () => {
                 type="text"
                 id="organization"
                 name="organization"
+                value={formData.organization}
+                onChange={handleChange}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="회사명을 입력해주세요"
               />
@@ -47,6 +136,9 @@ const Contact: React.FC = () => {
                 type="email"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="email@example.com"
               />
@@ -61,6 +153,9 @@ const Contact: React.FC = () => {
                 id="message"
                 name="message"
                 rows={8}
+                value={formData.message}
+                onChange={handleChange}
+                required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                 placeholder="문의사항을 입력해주세요"
               />
@@ -69,9 +164,14 @@ const Contact: React.FC = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="mt-4 px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200"
+              disabled={isSubmitting}
+              className={`mt-4 px-6 py-3 font-medium rounded-md transition-colors duration-200 ${
+                isSubmitting
+                  ? 'bg-gray-400 cursor-not-allowed'
+                  : 'bg-blue-600 text-white hover:bg-blue-700'
+              }`}
             >
-              문의하기
+              {isSubmitting ? '전송 중...' : '문의하기'}
             </button>
         </form>
       </div>
@@ -80,4 +180,3 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-
