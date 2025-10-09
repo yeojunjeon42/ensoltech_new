@@ -8,7 +8,7 @@ function Hero() {
             alt: 'Smart-filter system Particle Cut'
         },
         {
-            src: '/ensoltechv2/img/enproductive/TOPWAY On-line Chemical controller & dosing system  .png',
+            src: '/ensoltechv2/img/enproductive/TOPWAY On-line Chemical controller & dosing system  .png', 
             alt: 'TOPWAY On-line Chemical controller & dosing system'
         },
         {
@@ -45,7 +45,7 @@ function Hero() {
     }, [equipmentImages.length]);
 
     return (
-        <div className="pt-24 p-5">
+        <div className="pt-24 px-4 lg:px-32 py-8">
             <h1 className="text-black text-6xl font-bold leading-tight" style={{ fontFamily: 'Inter, Arial, Helvetica, sans-serif' }}>
                 ENSOLTECH
             </h1>
@@ -57,7 +57,7 @@ function Hero() {
                 솔루션을 제공하고 환경을 보호함으로써 고객의
                 수익과 사회적 가치를 높이는데 기여하겠습니다.
             </p>
-            <div className="w-full flex flex-col justify-center items-center mt-8 p-[10pt] relative">
+            <div className="w-full flex flex-col justify-center items-center mt-8 px-2 lg:px-4 relative">
                 {/* Image Container with Sliding Animation */}
                 <div className="w-full overflow-hidden rounded-lg shadow-lg">
                     <div 
@@ -65,7 +65,7 @@ function Hero() {
                         style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
                     >
                         {equipmentImages.map((image, index) => (
-                            <div key={index} className="relative w-full flex-shrink-0 p-8">
+                            <div key={index} className="relative w-full flex-shrink-0 p-4 lg:p-8">
                                 <img
                                     src={image.src}
                                     alt={image.alt}

@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="pt-24 p-10">
+    <div id="contact" className="pt-24 px-4 lg:px-32 p-10">
       <hr className="border-t border-gray-300 mb-8" />
       <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
       <p className="mb-8">Get in touch with Ensoltech for your manufacturing solutions.</p>
@@ -86,9 +86,15 @@ const Contact: React.FC = () => {
               <div
                 className={`p-4 rounded-md ${
                   submitStatus.type === 'success'
-                    ? 'bg-green-100 text-green-800 border border-green-300'
-                    : 'bg-red-100 text-red-800 border border-red-300'
+                    ? 'bg-green-100 text-green-800'
+                    : 'bg-red-100 text-red-800'
                 }`}
+                style={{
+                  backgroundColor: submitStatus.type === 'success'
+                    ? 'var(--color-success)'
+                    : 'var(--color-error)',
+                  borderColor: 'var(--border-color)'
+                }}
               >
                 {submitStatus.message}
               </div>
@@ -106,7 +112,8 @@ const Contact: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                style={{ borderColor: 'var(--border-color)' }}
                 placeholder="이름을 입력해주세요"
               />
             </div>
@@ -122,7 +129,8 @@ const Contact: React.FC = () => {
                 name="organization"
                 value={formData.organization}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                style={{ borderColor: 'var(--border-color)' }}
                 placeholder="회사명을 입력해주세요"
               />
             </div>
@@ -139,7 +147,8 @@ const Contact: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                style={{ borderColor: 'var(--border-color)' }}
                 placeholder="email@example.com"
               />
             </div>
@@ -156,7 +165,8 @@ const Contact: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                style={{ borderColor: 'var(--border-color)' }}
                 placeholder="문의사항을 입력해주세요"
               />
             </div>
@@ -167,9 +177,14 @@ const Contact: React.FC = () => {
               disabled={isSubmitting}
               className={`mt-4 px-6 py-3 font-medium rounded-md transition-colors duration-200 ${
                 isSubmitting
-                  ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-blue-600 text-white hover:bg-blue-700'
+                  ? 'cursor-not-allowed'
+                  : 'text-white hover:opacity-90'
               }`}
+              style={{
+                backgroundColor: isSubmitting
+                  ? 'var(--color-gray-400)'
+                  : 'var(--color-primary-dark)'
+              }}
             >
               {isSubmitting ? '전송 중...' : '문의하기'}
             </button>
