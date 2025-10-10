@@ -4,27 +4,27 @@ function Carousel() {
     // Array of equipment images from both folders
     const equipmentImages = [
         {
-            src: '/ensoltechv2/img/enproductive/Smart-filter system Particle Cut.png',
+            src: '/ensoltech_new/img/enproductive/Smart-filter system Particle Cut.png',
             alt: 'Smart-filter system Particle Cut'
         },
         {
-            src: '/ensoltechv2/img/enproductive/TOPWAY On-line Chemical controller & dosing system  .png', 
+            src: '/ensoltech_new/img/enproductive/TOPWAY On-line Chemical controller & dosing system  .png', 
             alt: 'TOPWAY On-line Chemical controller & dosing system'
         },
         {
-            src: '/ensoltechv2/img/equipment/OEM Equipment., Ltd. Horizontal Wet process.png',
+            src: '/ensoltech_new/img/equipment/OEM Equipment., Ltd. Horizontal Wet process.png',
             alt: 'OEM Equipment Horizontal Wet process'
         },
         {
-            src: '/ensoltechv2/img/equipment/PCB equipment solution  KSDW VCP - Steel Belt VCP.png',
+            src: '/ensoltech_new/img/equipment/PCB equipment solution  KSDW VCP - Steel Belt VCP.png',
             alt: 'PCB equipment solution KSDW VCP Steel Belt VCP'
         },
         {
-            src: '/ensoltechv2/img/equipment/SUNUS 수평 진공 홀플러깅 설비.png',
+            src: '/ensoltech_new/img/equipment/SUNUS 수평 진공 홀플러깅 설비.png',
             alt: 'SUNUS 수평 진공 홀플러깅 설비'
         },
         {
-            src: '/ensoltechv2/img/equipment/수평인라인 Desmear+PTH(DM)+Flash Cu line.png',
+            src: '/ensoltech_new/img/equipment/수평인라인 Desmear+PTH(DM)+Flash Cu line.png',
             alt: '수평인라인 Desmear+PTH(DM)+Flash Cu line'
         }
     ];

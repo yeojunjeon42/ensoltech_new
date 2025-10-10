@@ -32,7 +32,7 @@ export const equipmentData: EquipmentItem[] = [
     descriptionKorean: '펄스 주기 역방향 수직 연속 도금 시스템',
     specifications: ['Voltage: 0-15V', 'Current: 0-1200A', 'Tank Capacity: 2500L'],
     features: ['Pulse technology', 'Enhanced uniformity', 'Reduced defects'],
-    image: 'PCB equipment solution  KSDW VCP - Steel Belt VCP'
+    image: 'PCB equipment solution  KSDW VCP - Steel Belt VCP.png'
   },
   {
     id: 'carrier-cu-plating',
@@ -54,7 +54,7 @@ export const equipmentData: EquipmentItem[] = [
     descriptionKorean: '대형 PCB용 수평 전기 구리 도금 시스템',
     specifications: ['Panel Size: 610x610mm', 'Current Density: 2-5ASD', 'Speed: 1-5m/min'],
     features: ['Horizontal design', 'Large format', 'Electric drive'],
-    image: 'INSERT FILE NAME HERE.png'
+    image: 'OEM Equipment., Ltd. Horizontal Wet process.png'
   },
   {
     id: 'ic-plating',
@@ -78,7 +78,7 @@ export const equipmentData: EquipmentItem[] = [
     descriptionKorean: '드릴링된 구멍에서 수지 스미어를 제거하는 데스미어 공정 장비',
     specifications: ['Panel Size: 610x610mm', 'Process Time: 3-8min', 'Temperature: 60-80°C'],
     features: ['Resin removal', 'Hole cleaning', 'Process control'],
-    image: 'INSERT FILE NAME HERE.png'
+    image: '수평인라인 Desmear+PTH(DM)+Flash Cu line.png'
   },
   {
     id: 'electroless-cu',
@@ -157,7 +157,7 @@ export const equipmentData: EquipmentItem[] = [
     descriptionKorean: 'PCB 제조를 위한 진공 보조 구멍 플러깅 시스템',
     specifications: ['Vacuum: 0.1-0.8 bar', 'Hole Size: 0.1-2.0mm', 'Throughput: 500 panels/hr'],
     features: ['Vacuum technology', 'Precision plugging', 'High throughput'],
-    image: 'INSERT FILE NAME HERE.png'
+    image: 'SUNUS 수평 진공 홀플러깅 설비.png'
   },
 
   // Double-sided Automatic Printer
