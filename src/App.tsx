@@ -12,7 +12,7 @@ import './styles/styles.css';
 
 function App() {
     return (
-        <Router basename="/ensoltechv2">
+        <Router basename="/ensoltech_new">
             <div className="min-h-screen bg-white"> 
                 <Navbar />
                 <Routes>
