@@ -74,7 +74,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="flex justify-between items-center px-6 lg:px-32 py-2.5 fixed top-0 left-0 right-0 z-50 bg-gray-100/80 backdrop-blur-lg shadow-sm relative">
+        <nav className="flex justify-between items-center px-6 lg:px-32 py-2.5 fixed top-0 left-0 right-0 z-50 bg-gray-100/80 backdrop-blur-lg shadow-sm">
             {/* Logo and Brand Name */}
             <div className="flex items-center gap-1">
                 <Link to="/">
