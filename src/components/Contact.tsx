@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="pt-24 px-4 lg:px-32 p-10">
+    <div id="contact" className="my-8">
       <hr className="border-t border-gray-300 mb-8" />
       <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
       <p className="mb-8">Get in touch with Ensoltech for your manufacturing solutions.</p>
