@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ pages ]
   pull_request:
-    branches: [ main ]
+    branches: [ pages ]
 
 jobs:
   build-and-deploy:
@@ -15,7 +15,7 @@ jobs:
       id-token: write
     
     steps:
-    - name: Checkout
+    - name: Checkoutz
       uses: actions/checkout@v4
       
     - name: Setup Node.js
